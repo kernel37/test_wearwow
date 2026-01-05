@@ -1,12 +1,33 @@
-# Build outputs
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build & dist
+dist/
 build/
 
-# Dart & Flutter tools
-.dart_tool/
+# Vite
+.vite/
 
-# IDEs
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE & Editor
+.vscode/
 .idea/
-.vscode/   # optional
-
-# IntelliJ project files
 *.iml
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
