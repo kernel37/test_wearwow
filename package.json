@@ -2,7 +2,7 @@
   "name": "wearwow-app",
   "private": true,
   "version": "1.0.0",
-  "homepage": "https://kernel37.github.io/wearwow",
+  "homepage": "https://kernel37.github.io/test_wearwow",
   "type": "module",
   "scripts": {
     "dev": "vite",

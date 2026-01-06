@@ -4,9 +4,9 @@ A modern, responsive mobile e-commerce application built with React, TypeScript,
 
 ## 🌐 Live Preview
 
-[View Live Demo](https://kernel37.github.io/wearwow)
+[View Live Demo](https://kernel37.github.io/test_wearwow)
 
-![QR Code](https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://kernel37.github.io/wearwow)
+![QR Code](https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://kernel37.github.io/test_wearwow)
 
 ## 📋 Table of Contents
 
