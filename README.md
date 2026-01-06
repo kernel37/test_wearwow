@@ -1,53 +1,169 @@
-# Welcome to your Lovable project
+# WearWow - Mobile E-Commerce Application
 
-## Project info
+A modern, responsive mobile e-commerce application built with React, TypeScript, and Tailwind CSS. WearWow offers a seamless shopping experience with features like product browsing, wishlist management, cart operations, and order tracking.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🌐 Live Preview
 
-## How can I edit this code?
+[View Live Demo](https://kernel37.github.io/test_wearwow)
 
-There are several ways of editing your application.
+![QR Code](https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://kernel37.github.io/test_wearwow)
 
-**Use Lovable**
+## 📋 Table of Contents
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Available Scripts](#available-scripts)
+- [Development](#development)
+- [Architecture](#architecture)
 
-Changes made via Lovable will be committed automatically to this repo.
+## ✨ Features
 
-**Use your preferred IDE**
+- **Authentication**: Login, OTP verification, password reset
+- **Product Discovery**: Browse products by category with filtering and sorting
+- **Cart Management**: Add/remove items, adjust quantities, real-time total calculation
+- **Wishlist**: Save favorite items for later
+- **Order Management**: Track orders and view order details
+- **Profile**: User information and settings
+- **Notifications**: In-app notifications and alerts
+- **Responsive UI**: Mobile-first design with smooth animations
+- **Dark Mode Support**: Theme switching capability
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🛠 Tech Stack
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Frontend Framework**: React 18.3 with TypeScript 5.8
+- **Build Tool**: Vite 5.4
+- **Routing**: React Router DOM 6.30
+- **Styling**: Tailwind CSS 3.4 + PostCSS
+- **Component Library**: shadcn/ui (Radix UI primitives)
+- **State Management**: React Context API + React Query 5.83
+- **Form Management**: React Hook Form 7.61 + Zod validation
+- **Animations**: Framer Motion 12.23
+- **Icons**: Lucide React 0.462
+- **UI Utilities**: Sonner (toast notifications)
+- **Linting**: ESLint 9.32 with TypeScript support
 
-Follow these steps:
+## 📁 Project Structure
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+src/
+├── components/           # Reusable UI components
+│   ├── common/          # Feature-agnostic components (ProductCard, etc.)
+│   ├── layout/          # Layout components (MobileLayout, BottomNav)
+│   ├── ui/              # shadcn/ui component library
+│   └── NavLink.tsx      # Navigation link component
+├── pages/               # Screen/page components
+│   ├── auth/            # Authentication screens
+│   └── *.tsx            # Feature screens
+├── context/             # React Context for state management
+├── hooks/               # Custom React hooks
+├── data/                # Mock data and constants
+├── lib/                 # Utility functions and helpers
+├── assets/              # Static assets
+├── App.tsx              # Main app component with routing
+├── main.tsx             # Entry point
+└── index.css            # Global styles
 ```
 
-**Edit a file directly in GitHub**
+## 🚀 Getting Started
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Prerequisites
 
-**Use GitHub Codespaces**
+- Node.js 18+ (install with [nvm](https://github.com/nvm-sh/nvm#installing-and-updating))
+- npm or bun
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
+### Installation
+
+```sh
+# Clone the repository
+git clone https://github.com/kernel37/test_wearwow.git
+
+# Navigate to project directory
+cd wearwow
+
+# Install dependencies
+npm install
+# or
+bun install
+```
+
+### Development
+
+```sh
+# Start development server (http://localhost:5173)
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+
+# Run linter
+npm run lint
+```
+
+### Deployment
+
+```sh
+# Deploy to GitHub Pages
+npm run deploy
+```
+
+## 🏗 Architecture
+
+### State Management
+
+The application uses React Context API for global state management:
+
+- **AppContext**: Manages authentication, user data, cart, and wishlist
+- **useApp Hook**: Custom hook to access AppContext
+
+### Routing Structure
+
+- **Public Routes**: `/login`, `/otp`, `/forgot-password`, `/reset-password`
+- **Protected Routes**: All other routes require authentication
+- Routes are guarded by `ProtectedRoute` component
+
+### Component Organization
+
+- **UI Components** (`components/ui/`): Reusable shadcn/ui components
+- **Common Components** (`components/common/`): Business-specific components
+- **Layout Components** (`components/layout/`): App structure and navigation
+- **Page Components** (`pages/`): Full-screen views
+
+## 📝 Development Guidelines
+
+### Code Quality
+
+- Use TypeScript strict mode
+- Follow ESLint rules (run `npm run lint`)
+- Add proper type annotations
+
+### Naming Conventions
+
+- **Components**: PascalCase (e.g., `ProductCard.tsx`)
+- **Hooks**: camelCase starting with `use` (e.g., `useCart`)
+- **Utilities**: camelCase (e.g., `formatPrice`)
+- **Types/Interfaces**: PascalCase (e.g., `Product`, `CartItem`)
+
+### File Organization
+
+- Keep components focused and single-purpose
+- Co-locate related files
+- Export from index files in subdirectories when appropriate
+
+## 🔄 Contributing
+
+1. Create a feature branch: `git checkout -b feature/your-feature`
+2. Commit changes: `git commit -m 'Add your feature'`
+3. Push to branch: `git push origin feature/your-feature`
+4. Open a pull request
+
+## 📄 License
+
+This project is private and proprietary.
 - Edit files directly within the Codespace and commit and push your changes once you're done.
 
 ## What technologies are used for this project?
