@@ -84,8 +84,6 @@ cd wearwow
 
 # Install dependencies
 npm install
-# or
-bun install
 ```
 
 ### Development
