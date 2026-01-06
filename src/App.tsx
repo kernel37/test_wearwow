@@ -64,7 +64,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/test_wearwow">
         <AppProvider>
           <AppRoutes />
         </AppProvider>
